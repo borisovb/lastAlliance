@@ -106,7 +106,7 @@
                 </td>
                 <td>
                 @if($episode->stream_link)
-                    <a href="{{ route('watch_episode', $episode->slug) }}" class="btn btn-primary btn-pressure small">Гледай</a>
+                    <a href="{{ route('watch_episode_slug', [$episode->project->slug, $episode->number, $episode->slug]) }}" class="btn btn-primary btn-pressure small">Гледай</a>
                 @else
                     Няма
                 @endif
