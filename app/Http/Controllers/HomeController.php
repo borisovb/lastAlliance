@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use App\BlogPost;
 use App\Episode;
 use App\Project;
 use Mail;
@@ -30,6 +31,9 @@ class HomeController extends Controller {
 
 	public function index()
 	{
+	    $news = BlogPost::all();
+	    dd($news);
+
         $episodes = Episode::orderBy('created_at', 'desc')->take(12)->get();
 
 		return view('main/index', ['episodes' => $episodes]);
