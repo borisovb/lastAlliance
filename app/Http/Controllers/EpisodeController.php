@@ -31,9 +31,10 @@ class EpisodeController extends Controller
 
     public function watchEpisodeProcces($project, $number, $slug)
     {
+        $project = Project::where('slug', '=', $project)->first();
+
         if (is_null($slug))
         {
-           $project = Project::where('slug', '=', $project)->first();
            $episode = Episode::where('project_id', '=', $project->id)->where('number', '=', $number)->first();
         }
         else

@@ -23,7 +23,7 @@
                         <div class="buttons">
                             <a target="_blank" href="{{ $episode->download_link }}" class="btn btn-danger btn-pressure small">Изтегли</a>
                             @if($episode->stream_link)
-                                <a href="{{ route('watch_episode', $episode->slug) }}" class="btn btn-primary btn-pressure small">Гледай</a>
+                                <a href="{{ route('watch_episode_slug', [$episode->project->slug, $episode->number, $episode->slug]) }}" class="btn btn-primary btn-pressure small">Гледай</a>
                             @endif
                         </div>
                     </div>
