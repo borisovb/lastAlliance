@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class BlogPost extends Model
 {
-    public function owner()
+    public function author()
     {
         return $this->belongsTo('App\User');
     }

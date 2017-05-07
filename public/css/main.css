@@ -38,9 +38,7 @@ a:active {
         text-align: center;
         margin-left: auto;
         margin-right: auto;
-
     }
-
 }
 
 .rotate {
@@ -128,3 +126,27 @@ max .episode-banner-div {
 }
 
 .project-title {}
+
+.blog-post {
+    width: 300px;
+    display: inline-block;
+    margin: 5px;
+}
+
+.blog-post img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.author {
+    border-radius: 5em;
+    object-fit: cover;
+    height: 45px;
+    width: 45px;
+    font-size: 0.8em;
+}
+.date{
+    font-size: 0.8em;
+}
+

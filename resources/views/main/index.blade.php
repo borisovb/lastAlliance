@@ -1,9 +1,6 @@
 @extends('main.base')
 
 @section('content')
-
-        <h2>Последни епизоди</h2>
-        <hr>
 <script>
 $(document).ready(function(){
   $('.slider1').bxSlider({
@@ -16,7 +13,9 @@ $(document).ready(function(){
   });
 });
 </script>
-    <div class="row">
+
+        <h2>Последни епизоди</h2>
+        <hr>
         <div class="slider1">
 
             @foreach ($episodes as $episode)
@@ -27,7 +26,7 @@ $(document).ready(function(){
                     </div>
 
                     <div class="episode-info-div">
-                        <span class="episode-title">Епизод {{ $episode->number }} - {{ str_limit($episode->name_bg, $limit = 25, $end='...') }}</span>
+                        <span class="episode-title">Епизод {{ $episode->number }} - {{ str_limit($episode->name_bg, $limit = 13, $end='...') }}</span>
                         <br>
                         <span class="project-title">
                             <a href="{{ route('view_project', $episode->project->slug) }}">{{ $episode->project->title }}</a>
@@ -46,6 +45,31 @@ $(document).ready(function(){
             @endforeach
 
         </div>
-    </div>
+
+    <h2>Последни новини</h2>
+    <hr>
+    <section class="row">
+
+   @foreach ($posts as $post)
+
+    <article class="blog-post">
+           <img src="{{ $post->image }}" />
+       <h3>{{ $post->title }}</h3>
+       <p>{{ str_limit($post->content, $limit = 50, $end='...') }}
+       </p>
+       <div class="col-xs-4 col-md-4">
+       <img src="{{ 1 }}" class="author">
+       </div>
+        <div class="col-xs-8 col-md-8">
+        <p class="author">{{  1 }}
+        {{ $post->date }}</p>
+        </div>
+    </article>
+    @endforeach
+
+
+    </section>
+
+
 
 @endsection

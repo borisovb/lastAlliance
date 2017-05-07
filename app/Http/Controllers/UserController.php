@@ -88,6 +88,11 @@ class UserController extends Controller
         return view('about_us', ['greetings' => $name]);
     }
 
+    public function posts()
+    {
+        return $this->hasMany('App\BlogPost');
+    }
+
     public function logout()
     {
         Auth::logout();

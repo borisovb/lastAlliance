@@ -31,12 +31,10 @@ class HomeController extends Controller {
 
 	public function index()
 	{
-	    $news = BlogPost::all();
-	    dd($news);
-
+        $posts = BlogPost::all();
         $episodes = Episode::orderBy('created_at', 'desc')->take(12)->get();
 
-		return view('main/index', ['episodes' => $episodes]);
+		return view('main/index', ['episodes' => $episodes, 'posts' => $posts]);
 	}
 
 }
