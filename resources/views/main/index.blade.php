@@ -4,16 +4,30 @@
 
         <h2>Последни епизоди</h2>
         <hr>
+<script>
+$(document).ready(function(){
+  $('.slider1').bxSlider({
+    slideWidth: 230,
+    minSlides: 2,
+    maxSlides: 4,
+    slideMargin: 5,
+	pager: false
 
-        <div class="row">
-        @foreach ($episodes as $episode)
-                <div class="col-lg-6 episode">
+  });
+});
+</script>
+    <div class="row">
+        <div class="slider1">
+
+            @foreach ($episodes as $episode)
+               <div class="slide">
+                <div class="episode">
                     <div class="episode-banner-div">
                         <img class="episode-banner" src="{{ $episode->project->banner }}" alt="#">
                     </div>
 
                     <div class="episode-info-div">
-                        <span class="episode-title">{{ $episode->number }} - {{ $episode->name_bg }}</span>
+                        <span class="episode-title">Епизод {{ $episode->number }} - {{ str_limit($episode->name_bg, $limit = 25, $end='...') }}</span>
                         <br>
                         <span class="project-title">
                             <a href="{{ route('view_project', $episode->project->slug) }}">{{ $episode->project->title }}</a>
@@ -28,12 +42,10 @@
                         </div>
                     </div>
                 </div>
-
+                </div>
             @endforeach
-        </div>
 
-        <div class="text-center">
-            @include('pagination.default', ['paginator' => $episodes])
         </div>
+    </div>
 
 @endsection

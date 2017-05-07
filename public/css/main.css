@@ -3,41 +3,22 @@ body {
     padding-top: 65px;
 }
 
-
-
-.rotate{
-    overflow:hidden;
-    width: 65px;
-    -webkit-transition-duration: 0.8s;
-    -moz-transition-duration: 0.8s;
-    -o-transition-duration: 0.8s;
-    transition-duration: 0.8s;
-    -webkit-transition-property: -webkit-transform;
-    -moz-transition-property: -moz-transform;
-    -o-transition-property: -o-transform;
-    transition-property: transform;
-}
-.rotate:hover
-{
-    -webkit-transform:rotate(360deg);
-    -moz-transform:rotate(360deg);
-    -o-transform:rotate(360deg);
+a:hover,
+a:visited,
+a:link,
+a:active {
+    text-decoration: none;
 }
 
-/*.sidebar {*/
-    /*font-size: 13px;*/
-    /*margin-bottom: 20px;*/
-    /*min-height: 100%;*/
-    /*overflow: auto;*/
-/*}*/
-
-.col-sm-3half, .col-sm-8half {
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-
+.disabled {
+    pointer-events: none;
+    cursor: default;
 }
+
+.red {
+    color: #BF1C1C;
+}
+
 .video-frame {
     width: 100%;
     min-height: 33vw
@@ -55,45 +36,22 @@ body {
     }
 }
 
-@media (min-width: 990px) {
-
-    .col-sm-3half, .col-sm-8half {
-        float: right;
-    }
-
-    .col-sm-3half {
-        width: 20.16666667%;
-    }
-    .col-sm-8half {
-        width: 60.83333333%;
-    }
+.rotate {
+    overflow: hidden;
+    width: 65px;
+    transition-duration: 0.8s;
+    transition-property: transform;
 }
 
-
-
-.red {
-    color: #BF1C1C;
-}
-
-/*aside {*/
-    /*margin-bottom: 40px;*/
-/*}*/
-
-.episode-banner-big {
-    max-width: 100%;
+.rotate:hover {
+    transform: rotate(360deg);
 }
 
 .episode-banner {
     max-width: 100%;
-    min-height: 100px;
     object-fit: cover;
     border-top-left-radius: 0.3em;
     border-top-right-radius: 0.3em;
-}
-
-.disabled {
-    pointer-events: none;
-    cursor: default;
 }
 
 .episode-info-div {
@@ -104,12 +62,11 @@ body {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, .1);
 }
 
-.episode-banner-div {
+max .episode-banner-div {
     width: 100%;
 }
 
-.episode-date
-{
+.episode-date {
     font-size: 13px;
 }
 
@@ -131,12 +88,6 @@ body {
 .episode-title:hover {
     color: #c81b1b;
 }
-
-a:hover, a:visited, a:link, a:active
-{
-    text-decoration: none;
-}
-
 
 .avatar-div {
     width: 170px;
@@ -169,7 +120,4 @@ a:hover, a:visited, a:link, a:active
     margin-bottom: 15px;
 }
 
-
-.project-title {
-
-}
+.project-title {}

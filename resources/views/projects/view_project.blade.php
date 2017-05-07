@@ -7,7 +7,7 @@
         <div class="col-md-4">
             <img class="episode-banner" src="{{ $project->poster }}" alt="">
         </div>
-        <div class="col-md-8" style="font-size: 1.1vw">
+        <div class="col-md-8">
             <h3 class="red">Информация</h3>
            <strong>■ Тип: </strong> ТВ серии <br>
            <strong>■ Жанр: </strong>
