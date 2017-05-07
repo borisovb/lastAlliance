@@ -19,7 +19,6 @@ class EmailController extends Controller
 
     public function contactForm()
     {
-
         return view('emails/contact-us');
     }
 
@@ -43,6 +42,8 @@ class EmailController extends Controller
             if (!$result['success'])
             {
                 flash('Моля докажете, че не сте робот!')->error();
+
+
             }
             return redirect('contact-us')->withInput()->withErrors($validator);
         }

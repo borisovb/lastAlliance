@@ -10,7 +10,8 @@ Route::get('completed', ['as' => 'view_completed', 'uses' => 'ProjectController@
 Route::get('project/{slug}/', ['as' => 'view_project', 'uses' => 'ProjectController@view']);
 Route::get('about-us', ['as' => 'about_us', 'uses' => 'MemberController@allMembers']);
 
-Route::get('episode/watch/{slug}/', ['as' => 'watch_episode', 'uses' => 'EpisodeController@watchEpisode']);
+Route::get('project/{project}/{number}/{slug}/', ['as' => 'watch_episode_slug', 'uses' => 'EpisodeController@watchEpisodeSlug']);
+Route::get('project/{project}/{number}/', ['as' => 'watch_episode', 'uses' => 'EpisodeController@watchEpisodeId']);
 
 
 Route::get('join', ['as' => 'join', 'uses' => 'EmailController@joinForm']);
@@ -23,4 +24,3 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
-

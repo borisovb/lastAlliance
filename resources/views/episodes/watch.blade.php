@@ -9,11 +9,11 @@
             <div style="margin: 9px" class="row">
             <span style="font-size: 20px"><strong> Епизод:</strong> {{ $episode->number }}</span>
             @if($next)
-                <a  style="margin-left: 10px;" href="{{ route('watch_episode', $next->slug) }}" class="btn btn-danger btn-pressure pull-right">Следващ</a>
+                <a  style="margin-left: 10px;" href="#" class="btn btn-danger btn-pressure pull-right">Следващ</a>
             @endif
 
             @if($previous)
-                <a href="{{ route('watch_episode', $previous->slug) }}" class="btn btn-danger btn-pressure pull-right">Предишен</a>
+                <a href="#" class="btn btn-danger btn-pressure pull-right">Предишен</a>
             @endif
             </div>
 

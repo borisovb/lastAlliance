@@ -1,25 +1,57 @@
 <?php namespace App\Http\Controllers;
 
 use App\Episode;
+use App\Project;
 
 class EpisodeController extends Controller
 {
-    public function watchEpisode($slug)
+    public function watchEpisodeSlug($project, $number, $slug)
     {
-        $episode = Episode::where('slug', '=', $slug)->first();
-        $nextEpisode = Episode::where('project_id', '=', $episode->project->id)->where('number', '=', $episode->number + 1)->first();
-        $previousEpisode = Episode::where('project_id', '=', $episode->project->id)->where('number', '=', $episode->number - 1)->first();
+        $arr = $this->watchEpisodeProcces($project, $number, $slug);
+
+        if (!$arr)
+        {
+            return view('errors/404');
+        }
+
+        return view( 'episodes/watch', $arr );
+    }
+
+    public function watchEpisodeId($project, $number)
+    {
+        $arr = $this->watchEpisodeProcces($project, $number, null);
+
+        if (!$arr)
+        {
+            return view('errors/404');
+        }
+
+        return view( 'episodes/watch', $arr );
+    }
+
+    public function watchEpisodeProcces($project, $number, $slug)
+    {
+        if (is_null($slug))
+        {
+           $project = Project::where('slug', '=', $project)->first();
+           $episode = Episode::where('project_id', '=', $project->id)->where('number', '=', $number)->first();
+        }
+        else
+        {
+           $episode = Episode::where('slug', '=', $slug)->where('number', '=', $number)->first();
+        }
+            $nextEpisode = Episode::where('project_id', '=', $project->id)->where('number', '=', $number + 1)->first();
+            $previousEpisode = Episode::where('project_id', '=', $project->id)->where('number', '=', $number - 1)->first();
 
         if (is_null($episode) || $episode->stream_link === "")
         {
             flash('Този епизод не съшествува!')->error();
-            return view('errors/404');
+            return false;
         }
 
         $url = $episode->stream_link;
         $embedUrl = str_replace("https://www.vbox7.com/play:", "https://www.vbox7.com/emb/external.php?vid=", $url);
 
-        return view('episodes/watch', ['episode' => $episode, 'embedUrl' => $embedUrl, 'next' => $nextEpisode, 'previous' => $previousEpisode]);
+        return ['episode' => $episode, 'embedUrl' => $embedUrl, 'next' => $nextEpisode, 'previous' => $previousEpisode];
     }
-
 }
