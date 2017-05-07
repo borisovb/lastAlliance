@@ -8,8 +8,9 @@
     @include('includes/navbar')
 </header>
 <body>
-<div class="container-fluid">
 
+
+<div class="container-fluid">
     <div class="col-md-9">
         @include('flash::message')
         @yield('content')</div>

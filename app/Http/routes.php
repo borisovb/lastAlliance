@@ -10,6 +10,9 @@ Route::get('completed', ['as' => 'view_completed', 'uses' => 'ProjectController@
 Route::get('project/{slug}/', ['as' => 'view_project', 'uses' => 'ProjectController@view']);
 Route::get('about-us', ['as' => 'about_us', 'uses' => 'MemberController@allMembers']);
 
+Route::get('episode/watch/{slug}/', ['as' => 'watch_episode', 'uses' => 'EpisodeController@watchEpisode']);
+
+
 Route::get('join', ['as' => 'join', 'uses' => 'EmailController@joinForm']);
 Route::post('join', ['as' => 'join_process', 'uses' => 'EmailController@joinProcess']);
 

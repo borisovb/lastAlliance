@@ -51,7 +51,7 @@
                         </ul>
                     </li>
             @else
-                <li><a href="{{ '/auth/login' }}">Логин</a></li>
+                <li><a href="{{ '/auth/login' }}">Вход</a></li>
                 <li><a href="{{ '/auth/register' }}">Регистрация</a></li>
             @endif
             </ul>

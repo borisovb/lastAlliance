@@ -5,7 +5,8 @@
     <hr>
     <div class="row">
     @foreach($projects as $project)
-        <a target="_blank" href='{{ route('view_project', $project->slug) }}'>
+        <a href='{{ route('view_project', $project->slug) }}'>
+
             <ul class='grid cs-style-3'>
                 <li>
                     <figure>

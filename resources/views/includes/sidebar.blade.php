@@ -1,8 +1,8 @@
 <aside>
     <h2 class="red ">За нас</h2>
     <hr>
-    <p>Ние сме малка група от фенсуб ентусиасти, които имат за цел да правят субтитри на любимите си анимета. Стараем се
-        работим качествено, но и с прилична скорост. </p> <br>
+    <p>Ние сме малка група от фенсуб ентусиасти, които имат за цел да правят субтитри на любимите си анимета. Стараем се да
+        работим качествено, но и с прилична скорост.</p>
     <a href="{{ route('join') }}">
         <div class="text-center">
             <button class="btn btn-danger btn-pressure btn-sensitive">Присъедини се</button>
@@ -34,6 +34,8 @@
 <aside>
     <h2 class="red ">Партньори</h2>
     <hr>
+    <a href="https://www.facebook.com/whitestarhs" target="_blank">
+        <img src="http://i.imgur.com/4WZRerF.png" width="22px" height="22px"/> White Star </a><br>
     <a href="https://www.facebook.com/AnimeFansBulgaria" target="_blank">
-        <img src="http://i.imgur.com/4WZRerF.png" width="16px" height="16px"/> Anime Fans Bulgaria </a>
+        <img src="http://i.imgur.com/4WZRerF.png" width="22px" height="22px"/> Anime Fans Bulgaria </a>
 </aside>

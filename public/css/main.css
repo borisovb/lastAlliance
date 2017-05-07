@@ -38,10 +38,20 @@ body {
     padding-left: 15px;
 
 }
+.video-frame {
+    width: 100%;
+    min-height: 33vw
+}
 
 @media not all and (min-width: 990px) {
     .sidebar {
         text-align: center;
+    }
+    .video-frame {
+        min-height: 47vw
+    }
+    .episode-title {
+        font-size: 1.5em;
     }
 }
 
@@ -104,8 +114,7 @@ body {
 }
 
 .episode-div {
-    padding: 0;
-    margin: 9px;
+    margin-bottom: 20px;
 }
 
 .member-name {
@@ -113,9 +122,19 @@ body {
 }
 
 .episode-title {
-    font-size: 15px;
-    color: #BF1C1C;
+    text-decoration: none;
+    color: #9b0006;
+    font-size: 1.1em;
     font-weight: 600;
+}
+
+.episode-title:hover {
+    color: #c81b1b;
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
 }
 
 
@@ -133,13 +152,11 @@ body {
 
 .member {
     margin-bottom: 13px;
-    border: 1px solid #d5d5d5;
-    padding: 10px;
     border-radius: 0.5em;
 }
 
 .project-title {
-    font-size: 12px;
+    font-size: 13px;
     color: #d71c1c;
     font-weight: 600;
 }
@@ -147,6 +164,11 @@ body {
 .buttons {
     margin-top: 9px;
 }
+
+.episode {
+    margin-bottom: 15px;
+}
+
 
 .project-title {
 

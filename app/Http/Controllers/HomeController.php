@@ -30,7 +30,7 @@ class HomeController extends Controller {
 
 	public function index()
 	{
-        $episodes = Episode::paginate(6);
+        $episodes = Episode::orderBy('created_at', 'desc')->paginate(6);
 
 		return view('main/index', ['episodes' => $episodes]);
 	}

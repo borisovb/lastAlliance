@@ -14,11 +14,13 @@
                 <div class="avatar-div col-sm-4">
                     <img class="member-avatar" src="{{ $member->avatar }}" alt="">
                 </div>
-                <div class="col-sm-8 member-info">
+                <div class="col-sm-8">
+                    <span style="font-size: 20px">{{ $member->name }}</span>
                     <p>orem Ipsum е елементарен примерен текст, използван в печатарската и типографската индустрия. Lorem Ipsum е индустриален стандарт от около 1500 година, когато неизвестен печатар взема няколко печатарски букви и ги разбърква, за да напечата с тях книга с примерни шрифтове.
                     </p>
+
                     @foreach($member->positions as $position)
-                        <span class="label label-primary">{{ $position->name_bg }}</span>
+                        <span class="label label-primary ">{{ $position->name_bg }}</span>
                     @endforeach
                 </div>
 
