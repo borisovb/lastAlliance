@@ -35,7 +35,7 @@ class HomeController extends Controller {
         $posts = BlogPost::take(3)->get();
         $episodes = Episode::orderBy('created_at', 'desc')->take(12)->get();
 
-		return view('main/index', ['episodes' => $episodes, 'posts' => $posts]);
-	}
+	return view('main/index', ['episodes' => $episodes, 'posts' => $posts]);
+    }
 
 }

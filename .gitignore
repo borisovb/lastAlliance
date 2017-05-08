@@ -5,3 +5,5 @@ _ide_helper.php
 .phpstorm.meta.php
 lumen_ide_helper.php
 .ide
+/nbproject/private/
+/nbproject
