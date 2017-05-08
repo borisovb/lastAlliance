@@ -58,10 +58,10 @@ $(document).ready(function(){
        <p>{{ str_limit($post->content, $limit = 50, $end='...') }}
        </p>
        <div class="col-xs-4 col-md-4">
-       <img src="{{ 1 }}" class="author">
+       <img src="{{ $post->owner->avatar }}" class="author">
        </div>
         <div class="col-xs-8 col-md-8">
-        <p class="author">{{  1 }}
+        <p class="author">{{ $post->owner->name }}
         {{ $post->date }}</p>
         </div>
     </article>

@@ -33,7 +33,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
     public function posts()
     {
-        return $this->hasMany('App\BlogPost');
+        return $this->hasMany('App\BlogPost', 'author');
     }
 
 }
