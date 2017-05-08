@@ -54,15 +54,15 @@ $(document).ready(function(){
 
     <article class="blog-post">
            <img src="{{ $post->image }}" />
-       <h3>{{ $post->title }}</h3>
-       <p>{{ str_limit($post->content, $limit = 50, $end='...') }}
+       <h3>{{ str_limit($post->title, $limit = 18, $end='...') }}</h3>
+       <p>{{ str_limit($post->content, $limit = 150, $end='...') }}
        </p>
        <div class="col-xs-4 col-md-4">
        <img src="{{ $post->owner->avatar }}" class="author">
        </div>
         <div class="col-xs-8 col-md-8">
         <p class="author">{{ $post->owner->name }}
-        {{ $post->date }}</p>
+        {{ $post->created_at->format('d M Y') }}</p>
         </div>
     </article>
     @endforeach
