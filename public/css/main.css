@@ -25,6 +25,12 @@ a:active {
 }
 
 @media not all and (min-width: 990px) {
+    .main {
+        text-align: center;
+    }
+}
+
+@media not all and (min-width: 990px) {
     .sidebar {
         text-align: center;
     }
@@ -128,12 +134,18 @@ max .episode-banner-div {
 .project-title {}
 
 .blog-post {
+    padding: 10px;
+    background: #fcfcfc;
+    border-bottom-right-radius:5px;
+    border-bottom-left-radius:5px;
     width: 300px;
     display: inline-block;
     margin: 5px;
 }
 
-.blog-post img {
+.blog-banner {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
     max-width: 100%;
     display: block;
     object-fit: cover;
@@ -149,4 +161,3 @@ max .episode-banner-div {
 .date{
     font-size: 0.8em;
 }
-

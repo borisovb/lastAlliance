@@ -15,5 +15,4 @@ class HomeController extends Controller {
 
 	return view('main/index', ['episodes' => $episodes, 'posts' => $posts]);
     }
-
 }

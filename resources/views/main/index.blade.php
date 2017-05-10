@@ -9,7 +9,6 @@ $(document).ready(function(){
     maxSlides: 4,
     slideMargin: 5,
 	pager: false
-
   });
 });
 </script>
@@ -17,10 +16,9 @@ $(document).ready(function(){
         <h2>Последни епизоди</h2>
         <hr>
         <div class="slider1">
-
             @foreach ($episodes as $episode)
                <div class="slide">
-                <div class="episode">
+                <div class="episode" title="Епизод {{ $episode->number }} - {{ $episode->name_bg }}">
                     <div class="episode-banner-div">
                         <img class="episode-banner" src="{{ $episode->project->banner }}" alt="#">
                     </div>
@@ -53,7 +51,7 @@ $(document).ready(function(){
    @foreach ($posts as $post)
 
     <article class="blog-post">
-           <img src="{{ $post->image }}" />
+           <img class="blog-banner" src="{{ $post->image }}" />
        <h3>{{ str_limit($post->title, $limit = 18, $end='...') }}</h3>
        <p>{{ str_limit($post->content, $limit = 150, $end='...') }}
        </p>
@@ -65,8 +63,10 @@ $(document).ready(function(){
         {{ $post->created_at->format('d M Y') }}</p>
         </div>
     </article>
-    @endforeach
 
+    @endforeach
+    <br>
+    <button class="btn btn-danger btn-pressure btn-sensitive">Виж всички</button>
 
     </section>
 
