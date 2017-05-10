@@ -66,7 +66,9 @@ $(document).ready(function(){
 
     @endforeach
     <br>
-    <button class="btn btn-danger btn-pressure btn-sensitive">Виж всички</button>
+   <div class="text-center">
+            <button class="btn btn-danger btn-pressure btn-sensitive">Виж всички</button>
+        </div>
 
     </section>
 

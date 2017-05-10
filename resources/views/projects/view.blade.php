@@ -11,12 +11,10 @@
                 <li>
                     <figure>
                         <img src='{{ $project->poster }}'>
-
                         <figcaption>
                             <h5>{{ $project->title }}</h5>
                             <span>{{ $project->title_bg }}</span>
                         </figcaption>
-
                     </figure>
                 </li>
             </ul>

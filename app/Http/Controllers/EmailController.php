@@ -39,11 +39,10 @@ class EmailController extends Controller
 
         if ($validator->fails() || !$result['success'])
         {
+            flash('Опа! Нещо си объркал')->error();
             if (!$result['success'])
             {
                 flash('Моля докажете, че не сте робот!')->error();
-
-
             }
             return redirect('contact-us')->withInput()->withErrors($validator);
         }

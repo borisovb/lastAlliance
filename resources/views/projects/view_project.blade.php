@@ -86,7 +86,7 @@
         <tr>
             <th>Епизод №</th>
             <th>Име на епизодa</th>
-            <th>Добавен</th>
+            <th>Дата на добавяне</th>
             <th>Изтегли</th>
             <th>Гледай онлайн</th>
         </tr>
@@ -96,7 +96,7 @@
             <tr>
                 <th scope="row">{{ $episode->number }}</th>
                 <td>{{ $episode->name_bg }}</td>
-                <td>{{ $episode->created_at }}</td>
+                <td>{{ $episode->created_at->format('d.m.Y') }}</td>
                 <td>
                 @if($episode->download_link)
                     <a target="_blank" href="{{ $episode->download_link }}" class="btn btn-danger btn-pressure small">Изтегли</a>

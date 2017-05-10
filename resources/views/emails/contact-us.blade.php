@@ -7,12 +7,6 @@
                 <h2 class="text-center">Изпрате ни съобщение</h2>
                 <hr>
 
-                @if (count($errors) > 0)
-                    <div class="alert alert-danger">
-                        <strong>Опа!</strong> Нещо си объркал.
-                    </div>
-                @endif
-
                 <form class="form-horizontal" role="form" method="POST">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
 

@@ -25,15 +25,6 @@ a:active {
 }
 
 @media not all and (min-width: 990px) {
-    .main {
-        text-align: center;
-    }
-}
-
-@media not all and (min-width: 990px) {
-    .sidebar {
-        text-align: center;
-    }
     .video-frame {
         min-height: 47vw
     }
