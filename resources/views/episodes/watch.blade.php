@@ -16,11 +16,11 @@
              <br>
 
             @if($next)
-                <a  style="margin-left: 10px;" href="{{ route('watch_episode_slug', [$episode->project->slug, $next->number, $next->slug]) }}" class="btn btn-danger btn-pressure pull-right">Следващ</a>
+                <a  style="margin-left: 10px;" href="{{ route('watch_episode_slug', [$episode->project->slug, $next->number, $next->slug]) }}" class="btn btn-danger btn-pressure pull-right">Следващ &rArr;</a>
             @endif
 
             @if($previous)
-                <a href="{{ route('watch_episode_slug', [$episode->project->slug, $previous->number, $previous->slug]) }}" class="btn btn-danger btn-pressure pull-right">Предишен</a>
+                <a href="{{ route('watch_episode_slug', [$episode->project->slug, $previous->number, $previous->slug]) }}" class="btn btn-danger btn-pressure pull-left">&lArr; Предишен</a>
             @endif
 
         </div>

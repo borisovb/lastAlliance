@@ -1,6 +1,5 @@
 .bx-wrapper {
     position: relative;
-    margin-bottom: 60px;
     padding: 0;
     -ms-touch-action: pan-y;
     touch-action: pan-y;
@@ -111,7 +110,7 @@ ul.bxslider {
     width: 32px;
     height: 32px;
     text-indent: -9999px;
-    z-index: 9999
+    z-index: 2
 }
 
 .bx-wrapper .bx-controls-direction a.disabled {

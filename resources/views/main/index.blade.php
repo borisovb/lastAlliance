@@ -30,7 +30,7 @@ $(document).ready(function(){
                             <a href="{{ route('view_project', $episode->project->slug) }}">{{ $episode->project->title }}</a>
                         </span>
                         <br>
-                        <span class="episode-date"><strong>Дата:</strong> {{ $episode->created_at }}</span>
+                        <span class="episode-date"><strong>Дата:</strong> {{ $episode->created_at->format('d.m.y H:i') }}</span>
                         <div class="buttons">
                             <a target="_blank" href="{{ $episode->download_link }}" class="btn btn-danger btn-pressure small">Изтегли</a>
                             @if($episode->stream_link)
@@ -56,7 +56,7 @@ $(document).ready(function(){
        <p>{{ str_limit($post->content, $limit = 150, $end='...') }}
        </p>
        <div class="col-xs-4 col-md-4">
-       <img src="{{ $post->owner->avatar }}" class="author">
+       <img class="author img-circle" src="{{ $post->owner->avatar }}">
        </div>
         <div class="col-xs-8 col-md-8">
         <p class="author">{{ $post->owner->name }}

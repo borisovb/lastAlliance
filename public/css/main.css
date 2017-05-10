@@ -50,7 +50,8 @@ a:active {
 }
 
 .episode-banner {
-    max-width: 100%;
+    width: 100%;
+    height: 30%;
     object-fit: cover;
     border-top-left-radius: 0.3em;
     border-top-right-radius: 0.3em;
@@ -62,22 +63,6 @@ a:active {
     box-shadow: 0 0 1px rgba(0, 0, 0, .2), 0 2px 4px rgba(0, 0, 0, .1);
     border-radius: 3px;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, .1);
-}
-
-max .episode-banner-div {
-    width: 100%;
-}
-
-.episode-date {
-    font-size: 13px;
-}
-
-.episode-div {
-    margin-bottom: 20px;
-}
-
-.member-name {
-    font-size: 22px;
 }
 
 .episode-title {
@@ -99,8 +84,6 @@ max .episode-banner-div {
 .member-avatar {
     width: 100%;
     height: 100%;
-    border-radius: 5em;
-    object-fit: cover;
 }
 
 .member {
@@ -122,19 +105,19 @@ max .episode-banner-div {
     margin-bottom: 15px;
 }
 
-.project-title {}
-
 .blog-post {
-    padding: 10px;
     background: #fcfcfc;
     border-bottom-right-radius:5px;
     border-bottom-left-radius:5px;
     width: 300px;
     display: inline-block;
     margin: 5px;
+    padding: 10px;
 }
 
 .blog-banner {
+    width: 100%;
+    height: 30%;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     max-width: 100%;
@@ -143,8 +126,6 @@ max .episode-banner-div {
 }
 
 .author {
-    border-radius: 5em;
-    object-fit: cover;
     height: 45px;
     width: 45px;
     font-size: 0.8em;
