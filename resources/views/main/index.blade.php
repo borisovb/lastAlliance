@@ -44,15 +44,15 @@ $(document).ready(function(){
 
         </div>
 
-    <h2>Последни новини</h2>
+    <h2>Последно от блога</h2>
     <hr>
     <section class="row">
 
    @foreach ($posts as $post)
 
     <article class="blog-post">
-           <img class="blog-banner" src="{{ $post->image }}" />
-       <h3>{{ str_limit($post->title, $limit = 18, $end='...') }}</h3>
+           <a href="{{ route('view_post_slug', [$post->id, $post->slug]) }}"><img class="blog-banner" src="{{ $post->image }}" />
+       <h3>{{ str_limit($post->title, $limit = 18, $end='...') }}</h3></a>
        <p>{{ str_limit($post->content, $limit = 150, $end='...') }}
        </p>
        <div class="col-xs-4 col-md-4">
@@ -67,7 +67,7 @@ $(document).ready(function(){
     @endforeach
     <br>
    <div class="text-center">
-            <button class="btn btn-danger btn-pressure btn-sensitive">Виж всички</button>
+            <a class="btn btn-danger btn-pressure btn-sensitive" href="{{ route('view_posts') }}">Виж всички</a>
         </div>
 
     </section>

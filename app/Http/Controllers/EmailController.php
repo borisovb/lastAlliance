@@ -49,8 +49,7 @@ class EmailController extends Controller
 
         Mail::send('emails/contact-message', $data, function($message)
         {
-            $message->from('guest@gmail.com', 'Guest');
-            $message->to('lastallianceeu@gmail.com')->cc('lastallianceeu@gmail.com')->subject('Кандидатстване за прием!');
+            $message->to('support@lastalliance.eu')->subject('Съобщение от сайта');
         });
 
         flash('Съобщението беше изпратено успешно! Скоро ще се свържем с вас за обратна връзка.')->success();
@@ -82,8 +81,7 @@ class EmailController extends Controller
 
         Mail::send('emails.welcome', $data, function($message)
         {
-            $message->from('guest@gmail.com', 'Guest');
-            $message->to('lastallianceeu@gmail.com')->cc('lastallianceeu@gmail.com');
+            $message->to('support@lastalliance.eu')->subject('Кандидат за групата');
         });
 
         flash('Заявката за кандидатстване беше изпратена успешно! Скоро ще се свържем с вас за обратна връзка.')->success();

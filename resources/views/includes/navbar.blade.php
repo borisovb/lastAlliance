@@ -10,10 +10,6 @@
             </button>
             <a href="/" class="navbar-brand"><img class="logo" src="{{ asset('/images/logo.png') }}"></a>
             <a class="navbar-brand" href="/">Last Alliance</a>
-            {{--<a class="navbar-brand" href="#">--}}
-
-                {{--<img alt="Brand" src="{{ asset('/images/logo.png') }}">--}}
-            {{--</a>--}}
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -34,6 +30,7 @@
                     </ul>
                 </li>
                 <li><a href="{{ route('about_us') }}">За нас</a></li>
+                <li><a href="{{ route('view_posts') }}">Блог</a></li>
                 <li><a href="{{ route('contact-us') }}">Контакти</a></li>
 
             </ul>

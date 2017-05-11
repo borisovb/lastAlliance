@@ -54,7 +54,7 @@ return [
 	|
 	*/
 
-	'from' => ['address' => 'lastallianceeu@gmail.com', 'name' => 'Last Alliance Team'],
+	'from' => ['address' => 'no-reply@lastalliance.eu', 'name' => 'Last Alliance'],
 
 	/*
 	|--------------------------------------------------------------------------
@@ -67,7 +67,7 @@ return [
 	|
 	*/
 
-	'encryption' => 'tls',
+	'encryption' => 'ssl',
 
 	/*
 	|--------------------------------------------------------------------------
