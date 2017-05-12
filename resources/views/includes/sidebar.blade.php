@@ -35,7 +35,7 @@
     <h2 class="red ">Партньори</h2>
     <hr>
     <a href="https://www.facebook.com/whitestarhs" target="_blank">
-        <img src="http://i.imgur.com/4WZRerF.png" width="22px" height="22px"/> White Star </a><br>
+        <img src="http://i.imgur.com/4WZRerF.png" width="22px" height="22px"/> WhiteStar </a><br>
     <a href="https://www.facebook.com/AnimeFansBulgaria" target="_blank">
         <img src="http://i.imgur.com/4WZRerF.png" width="22px" height="22px"/> Anime Fans Bulgaria </a>
 </aside>

@@ -14,7 +14,9 @@
     <div class="col-md-9">
         @include('flash::message')
         @yield('content')</div>
-    <aside class="sidebar col-md-3 pull-right"> @include('includes/sidebar') </aside>
+    <aside class="sidebar col-md-3 pull-right">
+        @include('includes/sidebar')
+    </aside>
 </div>
 
     @include('includes/footer')
