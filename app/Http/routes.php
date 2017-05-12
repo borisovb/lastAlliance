@@ -11,8 +11,11 @@ Route::get('project/{slug}/', ['as' => 'view_project', 'uses' => 'ProjectControl
 Route::get('about-us', ['as' => 'about_us', 'uses' => 'MemberController@allMembers']);
 
 Route::get('project/{project}/{number}/{slug}/', ['as' => 'watch_episode_slug', 'uses' => 'EpisodeController@watchEpisodeSlug']);
-Route::get('project/{project}/{number}/', ['as' => 'watch_episode', 'uses' => 'EpisodeController@watchEpisodeId']);
+Route::get('project/{project}/{number}/', ['as' => 'watch_episode', 'uses' => 'EpisodeController@watchEpisode']);
 
+Route::get('blog/', ['as' => 'view_posts', 'uses' => 'BlogController@viewPosts']);
+Route::get('blog/{id}/{slug}/', ['as' => 'view_post_slug', 'uses' => 'BlogController@viewPostSlug']);
+Route::get('blog/{id}/', ['as' => 'view_post', 'uses' => 'BlogController@viewPost']);
 
 Route::get('join', ['as' => 'join', 'uses' => 'EmailController@joinForm']);
 Route::post('join', ['as' => 'join_process', 'uses' => 'EmailController@joinProcess']);

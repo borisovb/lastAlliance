@@ -7,7 +7,7 @@ class EpisodeController extends Controller
 {
     public function watchEpisodeSlug($project, $number, $slug)
     {
-        $arr = $this->watchEpisodeProcces($project, $number, $slug);
+        $arr = $this->watchEpisodeProcess($project, $number, $slug);
 
         if (!$arr)
         {
@@ -17,9 +17,9 @@ class EpisodeController extends Controller
         return view( 'episodes/watch', $arr );
     }
 
-    public function watchEpisodeId($project, $number)
+    public function watchEpisode($project, $number)
     {
-        $arr = $this->watchEpisodeProcces($project, $number, null);
+        $arr = $this->watchEpisodeProcess($project, $number, null);
 
         if (!$arr)
         {
@@ -29,7 +29,7 @@ class EpisodeController extends Controller
         return view( 'episodes/watch', $arr );
     }
 
-    public function watchEpisodeProcces($project, $number, $slug)
+    public function watchEpisodeProcess($project, $number, $slug)
     {
         $project = Project::where('slug', '=', $project)->first();
 
