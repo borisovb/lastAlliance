@@ -135,7 +135,8 @@ return [
 		'Illuminate\Translation\TranslationServiceProvider',
         Laracasts\Flash\FlashServiceProvider::class,
 		'Illuminate\Validation\ValidationServiceProvider',
-		'Illuminate\View\ViewServiceProvider', /*
+		'Illuminate\View\ViewServiceProvider',
+       /*
 		 * Application Service Providers...
 		 */
 		'App\Providers\AppServiceProvider',
