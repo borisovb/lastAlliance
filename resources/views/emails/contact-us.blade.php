@@ -5,7 +5,7 @@
         <div class="row">
                 <h2 class=>Изпрате ни съобщение</h2>
                 <hr>
-
+            @include('flash::message')
             <div class="col-md-8">
                 <form class="form-horizontal" role="form" method="POST">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">

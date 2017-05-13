@@ -5,7 +5,7 @@
 
 @endsection
 @section('content')
-    <h2 class="red text-center">{{ $project->title_bg }}</h2>
+    <h2>{{ $project->title_bg }}</h2>
     <hr>
     <div class="row">
         <div class="col-md-4">
@@ -86,7 +86,7 @@
     <p>{{ $project->description }}</p>
 
     <table class="table">
-        <thead class="thead-inverse">
+        <thead class="thead-inverse red">
         <tr>
             <th>Епизод №</th>
             <th>Име на епизодa</th>

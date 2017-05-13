@@ -1,6 +1,5 @@
 .grid {
 	max-width: 1300px;
-	height: 280px;
 	margin: 0 auto;
 	list-style: none;
 	text-align: center;
@@ -125,6 +124,7 @@
 }
 
 .cs-style-3 figure img {
+	height: 287px;
 	-webkit-transition: -webkit-transform 0.4s;
 	-moz-transition: -moz-transform 0.4s;
 	transition: transform 0.4s;
