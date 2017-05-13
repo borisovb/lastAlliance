@@ -1,5 +1,9 @@
 @extends('main.base')
 
+@section('specificTags')
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/pages/watchEpisodes.css') }}">
+@endsection
+
 @section('content')
     <div class="row">
         <div class="col-md-10">

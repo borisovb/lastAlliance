@@ -83,7 +83,6 @@
 }
 
 .cs-style-1 figcaption span {
-    font-size: 0.5em;
 	display: block;
 }
 
@@ -379,10 +378,4 @@
 	-moz-transition: opacity 0.3s 0.2s;
 	transition: opacity 0.3s 0.2s;
 	opacity: 1;
-}
-
-
-
-span {
-    font-size: 0.8em;
 }

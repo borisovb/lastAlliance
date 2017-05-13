@@ -1,7 +1,11 @@
 @extends('main.base')
 
+@section('specificTags')
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/components/projectbox.css') }}">
+@endsection
+
 @section('content')
-    <h1 class="text-center">{{ $status }}</h1>
+    <h1>{{ $status }}</h1>
     <hr>
     <div class="row">
     @foreach($projects as $project)

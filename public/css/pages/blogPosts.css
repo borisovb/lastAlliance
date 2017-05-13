@@ -1,0 +1,13 @@
+.blogPost-image{
+    width: 100%;
+    height: 30%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.blogPost-content{
+    font-size: 13pt;
+}
+.author {
+    height: 55px;
+    width: 55px;
+}

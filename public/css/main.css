@@ -19,25 +19,6 @@ a:active {
     color: #BF1C1C;
 }
 
-.video-frame {
-    width: 100%;
-    min-height: 33vw
-}
-
-@media not all and (min-width: 990px) {
-    .video-frame {
-        min-height: 47vw
-    }
-    .episode-title {
-        font-size: 1.5em;
-    }
-    .member-name {
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
 .rotate {
     overflow: hidden;
     width: 65px;
@@ -47,89 +28,4 @@ a:active {
 
 .rotate:hover {
     transform: rotate(360deg);
-}
-
-.episode-banner {
-    width: 100%;
-    height: 30%;
-    object-fit: cover;
-    border-top-left-radius: 0.3em;
-    border-top-right-radius: 0.3em;
-}
-
-.episode-info-div {
-    padding: 8px;
-    background: #f9f9f9;
-    box-shadow: 0 0 1px rgba(0, 0, 0, .2), 0 2px 4px rgba(0, 0, 0, .1);
-    border-radius: 3px;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, .1);
-}
-
-.episode-title {
-    text-decoration: none;
-    color: #9b0006;
-    font-size: 1.1em;
-    font-weight: 600;
-}
-
-.episode-title:hover {
-    color: #c81b1b;
-}
-
-.avatar-div {
-    width: 170px;
-    height: 140px;
-}
-
-.member-avatar {
-    width: 100%;
-    height: 100%;
-}
-
-.member {
-    margin-bottom: 13px;
-    border-radius: 0.5em;
-}
-
-.project-title {
-    font-size: 13px;
-    color: #d71c1c;
-    font-weight: 600;
-}
-
-.buttons {
-    margin-top: 9px;
-}
-
-.episode {
-    margin-bottom: 15px;
-}
-
-.blog-post {
-    background: #fcfcfc;
-    border-bottom-right-radius:5px;
-    border-bottom-left-radius:5px;
-    width: 300px;
-    display: inline-block;
-    margin: 5px;
-    padding: 10px;
-}
-
-.blog-banner {
-    width: 100%;
-    height: 30%;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    max-width: 100%;
-    display: block;
-    object-fit: cover;
-}
-
-.author {
-    height: 45px;
-    width: 45px;
-    font-size: 0.8em;
-}
-.date{
-    font-size: 0.8em;
 }
