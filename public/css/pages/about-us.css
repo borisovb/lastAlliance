@@ -1,0 +1,14 @@
+.avatar-div {
+    width: 170px;
+    height: 140px;
+}
+
+.member-avatar {
+    width: 100%;
+    height: 100%;
+}
+
+.member {
+    margin-bottom: 13px;
+    border-radius: 0.5em;
+}

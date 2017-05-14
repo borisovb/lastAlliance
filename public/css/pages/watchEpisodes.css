@@ -1,0 +1,17 @@
+.video-frame {
+    width: 100%;
+    min-height: 33vw;
+}
+@media not all and (min-width: 990px) {
+    .video-frame {
+        min-height: 47vw
+    }
+    .episode-title {
+        font-size: 1.5em;
+    }
+    .member-name {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

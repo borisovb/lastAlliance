@@ -1,11 +1,15 @@
 @extends('main.base')
+@section('specificTags')
 
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/pages/project.css') }}">
+
+@endsection
 @section('content')
-    <h2 class="red text-center">{{ $project->title_bg }}</h2>
+    <h2>{{ $project->title_bg }}</h2>
     <hr>
     <div class="row">
         <div class="col-md-4">
-            <img class="episode-banner" src="{{ $project->poster }}" alt="">
+            <img class="project-poster" src="{{ $project->poster }}" alt="">
         </div>
         <div class="col-md-8">
             <h3 class="red">Информация</h3>
@@ -82,7 +86,7 @@
     <p>{{ $project->description }}</p>
 
     <table class="table">
-        <thead class="thead-inverse">
+        <thead class="thead-inverse red">
         <tr>
             <th>Епизод №</th>
             <th>Име на епизодa</th>

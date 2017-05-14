@@ -3,10 +3,11 @@
 @section('content')
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-8">
-                <h2 class="text-center">Кандидатстване за прием в групата</h2>
-                <hr>
 
+                <h2>Кандидатстване за прием в групата</h2>
+                <hr>
+            @include('flash::message')
+            <div class="col-md-8">
                 @if (count($errors) > 0)
                     <div class="alert alert-danger">
                         <strong>Опа!</strong> Нещо си объркал.

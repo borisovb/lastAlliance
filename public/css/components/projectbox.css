@@ -1,6 +1,5 @@
 .grid {
 	max-width: 1300px;
-	height: 280px;
 	margin: 0 auto;
 	list-style: none;
 	text-align: center;
@@ -83,7 +82,6 @@
 }
 
 .cs-style-1 figcaption span {
-    font-size: 0.5em;
 	display: block;
 }
 
@@ -126,6 +124,7 @@
 }
 
 .cs-style-3 figure img {
+	height: 287px;
 	-webkit-transition: -webkit-transform 0.4s;
 	-moz-transition: -moz-transform 0.4s;
 	transition: transform 0.4s;
@@ -379,10 +378,4 @@
 	-moz-transition: opacity 0.3s 0.2s;
 	transition: opacity 0.3s 0.2s;
 	opacity: 1;
-}
-
-
-
-span {
-    font-size: 0.8em;
 }
