@@ -78,7 +78,18 @@
             <br>
             <strong>○ Проверка на качеството: </strong>
             @foreach($project->qualityControl as $qualityControl)
-                 {{ $qualityControl->name }}
+                {{ $qualityControl->name }}
+                @if($project->qualityControl->last() != $qualityControl)
+                    |
+                @endif
+            @endforeach
+            <br>
+            <strong>○ Тайпсет: </strong>
+            @foreach($project->typeseters as $typeset)
+                {{ $typeset->name }}
+                @if($project->typeseters->last() != $typeset)
+                    |
+                @endif
             @endforeach
         </div>
     </div>
