@@ -35,7 +35,7 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
-Route::group(['domain' => 'blog.localhost:8000'], function()
+Route::group(['domain' => '{blog}.localhost'], function()
 {
 
     Route::any('/', function()
