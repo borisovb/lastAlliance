@@ -102,7 +102,7 @@
             <th>Епизод №</th>
             <th>Име на епизодa</th>
             <th>Дата на добавяне</th>
-            <th>Изтегли</th>
+            <th class="text-center" colspan="4">Изтегли</th>
             <th>Гледай онлайн</th>
         </tr>
         </thead>
@@ -113,16 +113,39 @@
                 <td>{{ $episode->name_bg }}</td>
                 <td>{{ $episode->created_at->format('d.m.Y') }}</td>
                 <td>
-                @if($episode->download_link)
-                    <a target="_blank" href="{{ $episode->download_link }}" class="btn btn-danger btn-pressure small">Изтегли</a>
-                @else
-                    Няма
-                @endif
+                    @if(!strlen($episode->download_480p) < 3)
+                        <a target="_blank" href="{{ $episode->download_480p }}">480p</a>
+                    @else
+                        480p
+                    @endif
+                </td>
+                <td>
+                    @if(!strlen($episode->download_720p) < 3)
+                        <a target="_blank" href="{{ $episode->download_720p }}">720p</a>
+                    @else
+                        720p
+                    @endif
+                </td>
+                <td>
+                    @if(!strlen($episode->download_810p) < 3)
+                        <a target="_blank" href="{{ $episode->download_810p }}">810p</a>
+                    @else
+                        810p
+                    @endif
+                </td>
+                <td>
+                    @if(!strlen($episode->download_1080p) < 3)
+                        <a target="_blank" href="{{ $episode->download_1080p }}">1080p</a>
+                    @else
+                        1080p
+                    @endif
                 </td>
                 <td>
                 @if($episode->stream_link)
+                    <div class="text-center">
                     <a href="{{ route('watch_episode_slug', [$episode->project->slug, $episode->number, $episode->slug]) }}" class="btn btn-primary btn-pressure small">Гледай</a>
-                @else
+                    </div>
+                    @else
                     Няма
                 @endif
                 </td>
