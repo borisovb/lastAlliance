@@ -5,6 +5,7 @@
 
 <div class="slider1">
     @foreach ($episodes as $episode)
+        {{--TODO: Make the slider div bigger so it doesn't cut off part of the download options--}}
         <div class="slide">
             <section class="episode" title="Епизод {{ $episode->number }} - {{ $episode->name_bg }}">
                 <div class="episode-banner-div">
@@ -20,11 +21,15 @@
                     <br>
                     <span class="episode-date"><strong>Дата:</strong> {{ $episode->created_at->format('d.m.y H:i') }}</span>
                     <div class="buttons">
-                        <a target="_blank" href="{{ $episode->download_link }}" class="btn btn-danger btn-pressure small">Изтегли</a>
                         @if($episode->stream_link)
                             <a href="{{ route('watch_episode_slug', [$episode->project->slug, $episode->number, $episode->slug]) }}" class="btn btn-primary btn-pressure small">Гледай</a>
                         @endif
+                        <a target="_blank" class="btn btn-danger small download-button btn-pressure">Изтегли</a>
+                            <div class="download-options">
+                                @include('main/downloadOptions')
+                            </div>
                     </div>
+
                 </div>
             </section>
         </div>

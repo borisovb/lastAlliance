@@ -5,6 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+use Illuminate\Support\Facades\Auth;
 
 class User extends Model implements AuthenticatableContract, CanResetPasswordContract {
 
@@ -34,6 +35,28 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     public function posts()
     {
         return $this->hasMany('App\BlogPost', 'author');
+    }
+
+    public function roles()
+    {
+        return $this->belongsToMany('App\User', 'users_roles');
+    }
+
+    public function getRoles()
+    {
+        $roles = [];
+
+        foreach ($this->roles as $role)
+        {
+            $roles[] = $role->role_id;
+        }
+
+        return $roles;
+    }
+
+    public function isAdmin()
+    {
+        return true;
     }
 
 }

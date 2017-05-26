@@ -1,4 +1,3 @@
-// NavbarButtonEffect
 $(function(){
     $('#nav').click(function() {
         $(this).toggleClass('open');
@@ -11,5 +10,5 @@ $(document).ready(function () {
     $('ul.nav a').filter(function() {
         return this.href == url;
     }).parent().addClass('active');
+
 });
-// END NavbarButtonEffect

@@ -1,5 +1,6 @@
 @extends('main.base')
 
+
 @section('specificTags')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/pages/watchEpisodes.css') }}">
 @endsection
@@ -11,9 +12,10 @@
             <h4><a class="episode-title" href="{{ route('view_project', $episode->project->slug) }}">{{ $episode->project->title }}</a></h4>
             <div style="margin: 9px" class="row">
             <span style="font-size: 20px"><strong> Епизод:</strong> [ {{ $episode->number < 10 ? '0' : '' }}{{ $episode->number }} ] - {{ $episode->name_bg }}</span>
+                <button class="switch btn btn-primary pull-right">Угаси лампите</button>
             </div>
 
-            <iframe class="video-frame" src="{{ $embedUrl }}"
+            <iframe class="video-frame video" src="{{ $embedUrl }}"
                     frameborder="0" allowfullscreen>
             </iframe>
 
@@ -29,4 +31,10 @@
 
         </div>
     </div>
+    <div id='persoff'></div>
+
+@endsection
+
+@section('scripts')
+    <script src="{{ asset('js/lights-off.js') }}"></script>
 @endsection

@@ -35,12 +35,10 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
-Route::group(['domain' => '{blog}.localhost'], function()
+Route::group(['prefix' => 'admin'], function()
 {
-
-    Route::any('/', function()
-    {
-        return 'test';
-    });
+    Route::get('/', ['as' => 'admin_index', 'uses' => 'Admin\AdminController@index', 'middleware' => ['auth', 'admin'] ]);
 
 });
+
+

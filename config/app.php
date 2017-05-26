@@ -136,9 +136,9 @@ return [
         Laracasts\Flash\FlashServiceProvider::class,
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
-       /*
-		 * Application Service Providers...
-		 */
+        /*
+          * Application Service Providers...
+          */
 		'App\Providers\AppServiceProvider',
 		'App\Providers\BusServiceProvider',
 		'App\Providers\ConfigServiceProvider',
@@ -192,7 +192,6 @@ return [
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
-
 	],
 
 ];

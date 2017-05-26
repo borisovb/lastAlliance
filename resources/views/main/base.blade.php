@@ -4,7 +4,6 @@
     <title>Last Alliance</title>
     @include('includes/mainTags')
     @include('includes/cssTags')
-    @include('includes/jsTags')
     @yield('specificTags')
 </head>
 <header>
@@ -21,6 +20,8 @@
 </div>
 
 @include('includes/footer')
+@include('includes/jsTags')
+@yield('scripts')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 </body>

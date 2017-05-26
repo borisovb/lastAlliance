@@ -1,6 +1,7 @@
 body {
     font-family: "Century Gothic", sans-serif;
     padding-top: 65px;
+
 }
 
 a:hover,
@@ -28,4 +29,43 @@ a:active {
 
 .rotate:hover {
     transform: rotate(360deg);
+}
+
+.download-options {
+    display: none;
+    padding: 5px;
+}
+
+.labels {
+    margin: 5px;
+}
+
+.member-description {
+    display: none;
+    padding: 7px;
+}
+
+.inactive {
+    color: #bdbdbd;
+}
+
+.active {
+    filter: brightness(80%);
+}
+
+.video {
+    position: relative;
+    z-index: 102;
+}
+
+#persoff {
+    background: #000;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
 }

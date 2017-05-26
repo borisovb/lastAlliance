@@ -1,6 +1,7 @@
 .avatar-div {
     width: 170px;
     height: 140px;
+    margin-bottom: 25px;
 }
 
 .member-avatar {
@@ -9,6 +10,9 @@
 }
 
 .member {
-    margin-bottom: 13px;
+    margin-bottom: 10px;
     border-radius: 0.5em;
+    border: 1px solid rgba(213, 213, 213, 0.5);
+
+    padding: 10px;
 }
