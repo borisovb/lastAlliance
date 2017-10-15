@@ -84,7 +84,7 @@ class MemberController extends Controller
 
     public function allMembers()
     {
-        $members = Member::orderByRaw("RAND()")->get();;
+        $members = Member::where('status', 1)->orderByRaw("RAND()")->get();;
 
         return view('pages/about-us', ['members' => $members]);
     }

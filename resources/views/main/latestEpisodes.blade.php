@@ -1,5 +1,5 @@
 
-<h2>Последни епизоди</h2>
+<h2>Нови епизоди</h2>
 
 <hr>
 
@@ -13,7 +13,7 @@
                 </div>
 
                 <div class="episode-info-div">
-                    <span class="episode-title">Епизод {{ $episode->number }} - {{ str_limit($episode->name_bg, $limit = 13, $end='...') }}</span>
+                    <span class="episode-title">Епизод {{ $episode->number }} - {{ str_limit($episode->name_bg, $limit = 12, $end='...') }}</span>
                     <br>
                     <span class="project-title">
                             <a href="{{ route('view_project', $episode->project->slug) }}">{{ $episode->project->title }}</a>
@@ -25,7 +25,7 @@
                             <a href="{{ route('watch_episode_slug', [$episode->project->slug, $episode->number, $episode->slug]) }}" class="btn btn-primary btn-pressure small">Гледай</a>
                         @endif
                         <a target="_blank" class="btn btn-danger small download-button btn-pressure">Изтегли</a>
-                            <div class="download-options">
+                            <div class="download-options" style="display: none;">
                                 @include('main/downloadOptions')
                             </div>
                     </div>

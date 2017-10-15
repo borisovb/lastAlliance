@@ -34,7 +34,7 @@ class ProjectController extends Controller
 
     public function allProjects()
     {
-        $p = Project::paginate(8);
+        $p = Project::orderBy('created_at', 'desc')->paginate(8);
 
         return view('projects/view',  ['projects' => $p], ['status' => 'Всички']);
     }
@@ -54,7 +54,7 @@ class ProjectController extends Controller
 
     public function viewCompleted()
     {
-        $completedProjects = Project::where('is_completed', '!=', '0')->paginate(8);
+        $completedProjects = Project::orderBy('created_at', 'desc')->where('is_completed', '!=', '0')->paginate(8);
 
         return view('projects/view', ['projects' => $completedProjects], ['status' => 'Завършени']);
     }
@@ -62,7 +62,7 @@ class ProjectController extends Controller
 
     public function viewCurrent()
     {
-        $completedProjects = Project::where('is_completed', '=', '0')->paginate(8);
+        $completedProjects = Project::orderBy('created_at', 'desc')->where('is_completed', '=', '0')->paginate(8);
 
         return view('projects/view', ['projects' => $completedProjects], ['status' => 'Текущи']);
     }

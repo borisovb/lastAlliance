@@ -34,8 +34,10 @@
 <aside>
     <h2 class="red ">Партньори</h2>
     <hr>
-    <a href="https://www.facebook.com/whitestarhs" target="_blank">
-        <img src="http://i.imgur.com/4WZRerF.png" width="22px" height="22px"/> WhiteStar </a><br>
+    <a href="https://www.facebook.com/Anime-BG-320001141472807/" target="_blank">
+        <img src="http://i.imgur.com/4WZRerF.png" width="22px" height="22px"/> AnimeBg </a><br>
     <a href="https://www.facebook.com/AnimeFansBulgaria" target="_blank">
-        <img src="http://i.imgur.com/4WZRerF.png" width="22px" height="22px"/> Anime Fans Bulgaria </a>
+        <img src="http://i.imgur.com/4WZRerF.png" width="22px" height="22px"/> Anime Fans Bulgaria </a><br>
+    <a href="https://koreaposters.blogspot.com/" target="_blank">
+        <img src="http://i.imgur.com/4WZRerF.png" width="22px" height="22px"/> Dimbland </a>
 </aside>

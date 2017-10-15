@@ -2,6 +2,14 @@
 
 
 @section('specificTags')
+    <meta property="og:site_name" content="lastalliance.eu" />
+    <meta property="og:image" content="{{$imagePreview}}" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="720" />
+    <meta property="og:type" content="video.other" />
+    <meta property="og:title" content="{{$episode->project->title_bg}} - LastAlliance" />
+    <meta property="og:description" content="Гледай епизод: [ {{ $episode->number < 10 ? '0' : '' }}{{ $episode->number }} ] - {{ $episode->name_bg }} на {{$episode->project->title_bg}}" />
+
     <link rel="stylesheet" type="text/css" href="{{ asset('css/pages/watchEpisodes.css') }}">
 @endsection
 
@@ -28,7 +36,6 @@
             @if($previous)
                 <a href="{{ route('watch_episode_slug', [$episode->project->slug, $previous->number, $previous->slug]) }}" class="btn btn-danger btn-pressure pull-left">&lArr; Предишен</a>
             @endif
-
         </div>
     </div>
     <div id='persoff'></div>

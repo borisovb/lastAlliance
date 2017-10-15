@@ -37,7 +37,7 @@ return [
 	"email"                => "Полето не съдържа валиден имейл адрес.",
 	"filled"               => "Полето :attribute е задължително.",
 	"exists"               => "The selected :attribute is invalid.",
-	"image"                => "The :attribute must be an image.",
+	"images"                => "The :attribute must be an images.",
 	"in"                   => "The selected :attribute is invalid.",
 	"integer"              => "The :attribute must be an integer.",
 	"ip"                   => "The :attribute must be a valid IP address.",

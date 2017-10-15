@@ -9,6 +9,7 @@
 
     let downloadButton = $('.download-button');
     let downloadOptions = $('.download-options');
+    downloadOptions.hide();
 
     downloadButton.click(function() {
         $(this).toggleClass('active');

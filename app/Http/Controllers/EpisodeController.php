@@ -52,7 +52,9 @@ class EpisodeController extends Controller
 
         $url = $episode->stream_link;
         $embedUrl = str_replace("https://www.vbox7.com/play:", "https://www.vbox7.com/emb/external.php?vid=", $url);
+        $videoId = substr($url, strpos($url, 'y:')+2);
+        $imagePreview = "https://i49.vbox7.com/o/" . substr($videoId, 0, 3) . "/" . $videoId . "0.jpg";
 
-        return ['episode' => $episode, 'embedUrl' => $embedUrl, 'next' => $nextEpisode, 'previous' => $previousEpisode];
+        return ['episode' => $episode, 'embedUrl' => $embedUrl, 'next' => $nextEpisode, 'previous' => $previousEpisode, 'imagePreview' => $imagePreview];
     }
 }

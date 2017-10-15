@@ -69,3 +69,23 @@ a:active {
     height: 100%;
     z-index: 100;
 }
+
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+    z-index: 3;
+    color: #fff;
+    cursor: default;
+    background-color: #d31c1c;
+    border-color: #d31c1c;
+}
+
+.pagination>li>a, .pagination>li>span {
+    color: #d31c1c;
+}
+
+.pagination>li>a:hover, .pagination>li>span:hover {
+    color: #d64c40;
+}
+
+.download-options {
+    display: none;
+}

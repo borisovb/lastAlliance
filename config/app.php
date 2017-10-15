@@ -136,6 +136,7 @@ return [
         Laracasts\Flash\FlashServiceProvider::class,
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
+        Golonka\BBCode\BBCodeParserServiceProvider::class,
         /*
           * Application Service Providers...
           */
@@ -192,6 +193,7 @@ return [
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
-	],
+        'BBCode' => 'Golonka\BBCode\Facades\BBCodeParser'
+    ],
 
 ];

@@ -50,6 +50,11 @@ class Project extends Model
         return $this->belongsToMany('App\Genre', 'project_genres');
     }
 
+    public function types()
+    {
+        return $this->belongsToMany('App\Type', 'project_types');
+    }
+
     public function episodes()
     {
         return $this->hasMany('App\Episode');

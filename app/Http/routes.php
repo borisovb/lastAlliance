@@ -35,9 +35,32 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
-Route::group(['prefix' => 'admin'], function()
+Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function()
 {
-    Route::get('/', ['as' => 'admin_index', 'uses' => 'Admin\AdminController@index', 'middleware' => ['auth', 'admin'] ]);
+    Route::get('/', ['as' => 'admin_index', 'uses' => 'Admin\AdminController@index']);
+    Route::get('/blog', ['as' => 'admin_blog', 'uses' => 'Admin\AdminController@blog']);
+
+    Route::group(['prefix' => 'blog'], function()
+    {
+        Route::get('/', ['as' => 'blog_options', 'uses' => 'Admin\AdminController@blog']);
+        Route::get('post', ['as' => 'post_article', 'uses' => 'BlogController@create']);
+        Route::post('post', ['as' => 'post_article_process', 'uses' => 'BlogController@store']);
+
+        Route::get('{id}/edit', ['as' => 'edit_post', 'uses' => 'BlogController@edit']);
+        Route::post('{id}/edit', ['as' => 'edit_post', 'uses' => 'BlogController@update']);
+
+        Route::get('{id}/delete', ['as' => 'delete_post', 'uses' => 'BlogController@delete']);
+        Route::post('{id}/delete', ['as' => 'delete_post', 'uses' => 'BlogController@deleteProcess']);
+    });
+
+    Route::group(['prefix' => 'team'], function()
+    {
+
+    });
+
+    Route::get('/general', ['as' => 'admin_general', 'uses' => 'Admin\AdminController@general']);
+    Route::post('/database/drop', ['as' => 'database_drop', 'uses' => 'Admin\AdminController@drop']);
+
 
 });
 

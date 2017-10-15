@@ -7,7 +7,6 @@
 @section('content')
 <h2>Блог</h2> <hr>
 @foreach($posts as $post)
-
     <section class="blogPosts row">
         <div class="col-md-3">
             <img class="blogPost-img" src="{{ $post->image }}" >
@@ -22,7 +21,7 @@
         </div>
     </section>
     {{--<br>--}}
-    {{--{{ $post->image }} <br>--}}
+    {{--{{ $post->images }} <br>--}}
     {{--{{ $post->content }} <br>--}}
     {{--{{ $post->owner->name }} <br>--}}
     {{--{{ $post->created_at->format('d.m.Y') }}  --}}

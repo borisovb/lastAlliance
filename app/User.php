@@ -39,7 +39,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
     public function roles()
     {
-        return $this->belongsToMany('App\User', 'users_roles');
+        return $this->belongsToMany('App\Role', 'user_role', 'user_id', 'role_id');
     }
 
     public function getRoles()
@@ -48,7 +48,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
         foreach ($this->roles as $role)
         {
-            $roles[] = $role->role_id;
+            $roles[] = $role['attributes']['role'];
         }
 
         return $roles;
@@ -56,7 +56,8 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
     public function isAdmin()
     {
-        return true;
+        $userRoles = $this->getRoles();
+        return in_array('ROLE_ADMIN', $userRoles);
     }
 
 }

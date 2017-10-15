@@ -13,23 +13,26 @@
         </div>
         <div class="col-md-8">
             <h3 class="red">Информация</h3>
-           <strong>■ Тип: </strong> ТВ серии <br>
-           <strong>■ Жанр: </strong>
-                @foreach($project->genres as $genre)
-                     {{ $genre->name_bg }}
-                    @if($project->genres->last() != $genre)
-                        |
-                    @endif
-                @endforeach
+            <strong>■ Тип: </strong> {{$project->types[0]->name_bg}} <br>
+
+            <strong>■ Жанр: </strong>
+            @foreach($project->genres as $genre)
+                {{ $genre->name_bg }}
+                @if($project->genres->last() != $genre)
+                    |
+                @endif
+            @endforeach
             <br>
-           <strong>■ Епизоди: </strong> {{ $project->episodesNum }}<br>
-           <strong>■ Година: </strong> {{ $project->year }}<br>
-           <strong>■ Времетраене на епизод: </strong> {{ $project->duration }}<br>
+            <strong>■ Епизоди: </strong> {{ $project->episodesNum }}<br>
+            <strong>■ Година: </strong> {{ $project->year }}<br>
+            <strong>■ Времетраене на епизод: </strong> {{ $project->duration }}<br>
             <strong>■ Продуценти: </strong> {{ $project->producer }}<br>
             <strong>■ Повече информация: </strong>
 
             @if($project->mal)
-                <a target="_blank" class="red" href="{{ $project->anidb }}">AniDB</a> | <a target="_blank" class="red" href="{{ $project->mal }}">MAL</a> | <a target="_blank" class="red" href="{{ $project->ann }}">ANN</a><br>
+                <a target="_blank" class="red" href="{{ $project->anidb }}">AniDB</a> | <a target="_blank" class="red"
+                                                                                           href="{{ $project->mal }}">MAL</a>
+                | <a target="_blank" class="red" href="{{ $project->ann }}">ANN</a><br>
             @else
                 <a class="red" href="{{ $project->anidb }}">IMDB</a>
             @endif
@@ -37,44 +40,44 @@
 
             <h3 class="red  ">По проекта работят</h3>
             <strong>○ Превод: </strong>
-                @foreach($project->translators as $translator)
-                     {{ $translator->name }}
+            @foreach($project->translators as $translator)
+                {{ $translator->name }}
                 @if($project->translators->last() != $translator)
                     |
                 @endif
-                @endforeach
-                <br>
+            @endforeach
+            <br>
             <strong>○ Редакция: </strong>
-                @foreach($project->editors as $editor)
-                     {{ $editor->name }}
+            @foreach($project->editors as $editor)
+                {{ $editor->name }}
                 @if($project->editors->last() != $editor)
                     |
                 @endif
-                @endforeach
-                <br>
+            @endforeach
+            <br>
             <strong>○ Стайлинг: </strong>
-                @foreach($project->stylers as $styler)
-                     {{ $styler->name }}
+            @foreach($project->stylers as $styler)
+                {{ $styler->name }}
                 @if($project->stylers->last() != $styler)
                     |
                 @endif
-                @endforeach
-                <br>
+            @endforeach
+            <br>
             <strong>○ Караоке: </strong>
-                @foreach($project->karaokeMakers as $karaokeMakers)
-                     {{ $karaokeMakers->name }}
+            @foreach($project->karaokeMakers as $karaokeMakers)
+                {{ $karaokeMakers->name }}
                 @if($project->karaokeMakers->last() != $karaokeMakers)
                     |
                 @endif
-                @endforeach
+            @endforeach
             <br>
             <strong>○ Енкод: </strong>
-                @foreach($project->encoders as $encoder)
-                     {{ $encoder->name }}
+            @foreach($project->encoders as $encoder)
+                {{ $encoder->name }}
                 @if($project->encoders->last() != $encoder)
                     |
                 @endif
-                @endforeach
+            @endforeach
             <br>
             <strong>○ Проверка на качеството: </strong>
             @foreach($project->qualityControl as $qualityControl)
@@ -102,7 +105,7 @@
             <th>Епизод №</th>
             <th>Име на епизодa</th>
             <th>Дата на добавяне</th>
-            <th class="text-center" colspan="4">Изтегли</th>
+            <th class="text-center" colspan="2">Изтегли</th>
             <th>Гледай онлайн</th>
         </tr>
         </thead>
@@ -113,24 +116,10 @@
                 <td>{{ $episode->name_bg }}</td>
                 <td>{{ $episode->created_at->format('d.m.Y') }}</td>
                 <td>
-                    @if(!strlen($episode->download_480p) < 3)
-                        <a target="_blank" href="{{ $episode->download_480p }}">480p</a>
-                    @else
-                        <span class="inactive">480p</span>
-                    @endif
-                </td>
-                <td>
                     @if(!strlen($episode->download_720p) < 3)
                         <a target="_blank" href="{{ $episode->download_720p }}">720p</a>
                     @else
                         <span class="inactive">720p</span>
-                    @endif
-                </td>
-                <td>
-                    @if(!strlen($episode->download_810p) < 3)
-                        <a target="_blank" href="{{ $episode->download_810p }}">810p</a>
-                    @else
-                        <span class="inactive">810p</span>
                     @endif
                 </td>
                 <td>
@@ -141,13 +130,14 @@
                     @endif
                 </td>
                 <td>
-                @if($episode->stream_link)
-                    <div class="text-center">
-                    <a href="{{ route('watch_episode_slug', [$episode->project->slug, $episode->number, $episode->slug]) }}" class="btn btn-primary btn-pressure small">Гледай</a>
-                    </div>
+                    @if($episode->stream_link)
+                        <div class="text-center">
+                            <a href="{{ route('watch_episode_slug', [$episode->project->slug, $episode->number, $episode->slug]) }}"
+                               class="btn btn-primary btn-pressure small">Гледай</a>
+                        </div>
                     @else
-                    Няма
-                @endif
+                        Няма
+                    @endif
                 </td>
             </tr>
         @endforeach

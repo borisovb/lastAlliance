@@ -47,7 +47,7 @@ class EmailController extends Controller
             return redirect('contact-us')->withInput()->withErrors($validator);
         }
 
-        Mail::send('emails/contact-message', $data, function($message)
+            Mail::send('emails/contact-message', $data, function($message)
         {
             $message->to('support@lastalliance.eu')->subject('Съобщение от сайта');
         });
