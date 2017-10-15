@@ -3,7 +3,7 @@
 
 <hr>
 
-<div class="slider1">
+<div class="slider1" style="visibility: hidden;">
     @foreach ($episodes as $episode)
         {{--TODO: Make the slider div bigger so it doesn't cut off part of the download options--}}
         <div class="slide">
